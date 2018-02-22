@@ -81,9 +81,14 @@
     <Compile Include="Assets\Scripts\CanvasController.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeBallTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeController.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\boxGrab.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\boxGrabVer2.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\boxManager.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\codeSense.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\Utility\DoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\playerControllerBoxTester.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControllerVer2.cs" />
-    <Compile Include="Assets\Scripts\Utility\DoorTrigger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

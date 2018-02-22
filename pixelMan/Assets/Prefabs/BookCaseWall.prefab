@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4072777138464560}
   m_Layer: 0
-  m_Name: WallBookCaseThree
+  m_Name: BookCaseWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4504274504908770}
   m_Layer: 0
-  m_Name: BookCaseRowOne
+  m_Name: BookCaseRow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

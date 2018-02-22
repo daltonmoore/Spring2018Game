@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerControllerVer2 : MonoBehaviour
 {
     public Animator anim;
-    public String[] animStates = new String[4];
+    public String[] animFacingStates = new String[4];
     public static PlayerControllerVer2 playerController;
 
     Rigidbody2D rigid;
@@ -49,19 +49,19 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
         if (facing == "left")
         {
-            anim.Play(animStates[0]);
+            anim.Play(animFacingStates[0]);
         }
         else if (facing == "right")
         {
-            anim.Play(animStates[1]);
+            anim.Play(animFacingStates[1]);
         }
         else if (facing == "towards")
         {
-            anim.Play(animStates[2]);
+            anim.Play(animFacingStates[2]);
         }
         else if (facing == "forwards")
         {
-            anim.Play(animStates[3]);
+            anim.Play(animFacingStates[3]);
         }
     }
 
