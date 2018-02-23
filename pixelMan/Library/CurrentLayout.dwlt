@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 4966
+  controlID: 108
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 411
     width: 309
     height: 211
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -116,10 +116,10 @@ MonoBehaviour:
     y: 0
     width: 309
     height: 622
-  m_MinSize: {x: 102, y: 221}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 102, y: 242}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 5039
+  controlID: 52
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,10 +165,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 613, y: 492}
-  m_MaxSize: {x: 18008, y: 18042}
+  m_MinSize: {x: 613, y: 513}
+  m_MaxSize: {x: 18008, y: 18063}
   vertical: 0
-  controlID: 5218
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,10 +214,10 @@ MonoBehaviour:
     y: 0
     width: 1525
     height: 622
-  m_MinSize: {x: 306, y: 221}
-  m_MaxSize: {x: 8006, y: 8021}
+  m_MinSize: {x: 306, y: 242}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 0
-  controlID: 4918
+  controlID: 51
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,10 +327,10 @@ MonoBehaviour:
     y: 0
     width: 1525
     height: 947
-  m_MinSize: {x: 336, y: 492}
-  m_MaxSize: {x: 14006, y: 18042}
+  m_MinSize: {x: 336, y: 513}
+  m_MaxSize: {x: 14006, y: 18063}
   vertical: 1
-  controlID: 125
+  controlID: 107
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -385,9 +385,9 @@ MonoBehaviour:
     height: 390
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8ea2e6ff
-    m_LastClickedID: -1662322
-    m_ExpandedIDs: 10dde6ffcce4e6ff20e4e7ff84dfffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 1afcffff0000000076280000a2280000c2280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -442,9 +442,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.15814823, y: 0.1659602, z: 0.3515625}
+    m_Target: {x: -0.10220988, y: 0.042182125, z: 0.3515625}
     speed: 2
-    m_Value: {x: 0.15814823, y: 0.1659602, z: 0.3515625}
+    m_Value: {x: -0.10220988, y: 0.042182125, z: 0.3515625}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -471,9 +471,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.884649
+    m_Target: 2.259881
     speed: 2
-    m_Value: 1.884649
+    m_Value: 2.259881
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -715,19 +715,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/TestImages
+    - Assets/Scripts/InteractableObjects
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Sprites/TestImages
+  - Assets/Scripts/InteractableObjects
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Dalton\Desktop\Spring2018Game\pixelMan
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 33}
-    m_SelectedIDs: 4ecc0000
-    m_LastClickedID: 52302
-    m_ExpandedIDs: 000000001a26000032260000e4260000c0270000ac370000ae370000ffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 4c270000
+    m_LastClickedID: 10060
+    m_ExpandedIDs: 0000000024260000042700006429000066290000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -755,7 +755,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 36}
     m_SelectedIDs: aa2df7ff
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a26000032260000c0270000ac370000ae370000
+    m_ExpandedIDs: 00000000242600003e26000004270000fc2700006429000066290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -809,4 +809,4 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_DirectoriesAreaWidth: 115
+  m_DirectoriesAreaWidth: 221
