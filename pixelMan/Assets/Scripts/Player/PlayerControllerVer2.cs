@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerControllerVer2 : MonoBehaviour
 {
     public Animator anim;
+<<<<<<< HEAD
     public static PlayerControllerVer2 playerController;
 
     Rigidbody2D rigid;
@@ -14,12 +15,24 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     static string[] animFacingStates = { "faceLeftwards02", "faceRightwards02", "faceTowards02", "faceForwards02" };
     string facing;
+=======
+    public String[] animFacingStates = new String[4];
+    public static PlayerControllerVer2 playerController;
+    public bool canGrab;
+
+    Rigidbody2D rigid;
+    SpriteRenderer spriteRenderer;
+    String facing = "forwards";
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
 
     private void Awake()
     {
         playerController = GetComponent<PlayerControllerVer2>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+<<<<<<< HEAD
         facing = "towards";
+=======
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
     }
 
     void Start ()
@@ -46,6 +59,21 @@ public class PlayerControllerVer2 : MonoBehaviour
         {
             setSpriteFacing();
         }
+<<<<<<< HEAD
+=======
+        grab();
+    }
+
+    void grab()
+    {
+        if(canGrab)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                print("starting grab query");
+            }
+        }
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
     }
 
     void setSpriteFacing()

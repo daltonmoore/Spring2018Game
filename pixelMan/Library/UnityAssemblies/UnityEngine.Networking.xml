@@ -339,6 +339,14 @@
         <para>Show log messages with priority Info and higher. This is the default setting.</para>
       </summary>
     </member>
+<<<<<<< HEAD
+=======
+    <member name="F:UnityEngine.Networking.LogFilter.FilterLevel.SetInScripting">
+      <summary>
+        <para>Tells the NetworkManager to not set the filter level on startup.</para>
+      </summary>
+    </member>
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
     <member name="F:UnityEngine.Networking.LogFilter.FilterLevel.Warn">
       <summary>
         <para>Show log messages with priority Warning and higher.</para>
@@ -845,6 +853,14 @@
         <para>The registered network message handlers.</para>
       </summary>
     </member>
+<<<<<<< HEAD
+=======
+    <member name="P:UnityEngine.Networking.NetworkClient.hostPort">
+      <summary>
+        <para>The local port that the network client uses to connect to the server.</para>
+      </summary>
+    </member>
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
     <member name="P:UnityEngine.Networking.NetworkClient.hostTopology">
       <summary>
         <para>The host topology that this client is using.</para>
@@ -1328,7 +1344,11 @@
         <para>Returns a string representation of the NetworkConnection object state.</para>
       </summary>
     </member>
+<<<<<<< HEAD
     <member name="M:UnityEngine.Networking.NetworkConnection.TransportRecieve(System.Byte[],System.Int32,System.Int32)">
+=======
+    <member name="M:UnityEngine.Networking.NetworkConnection.TransportReceive(System.Byte[],System.Int32,System.Int32)">
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
       <summary>
         <para>This virtual function allows custom network connection classes to process data from the network before it is passed to the application.</para>
       </summary>
@@ -4165,6 +4185,14 @@ All of the player objects in the game are disabled when the host is lost. Then, 
         <para>What method to use to sync the object's position.</para>
       </summary>
     </member>
+<<<<<<< HEAD
+=======
+    <member name="P:UnityEngine.Networking.NetworkTransform.velocityThreshold">
+      <summary>
+        <para>The minimum velocity difference that will be synchronized over the network.</para>
+      </summary>
+    </member>
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
     <member name="T:UnityEngine.Networking.NetworkTransform.AxisSyncMode">
       <summary>
         <para>An axis or set of axis.</para>

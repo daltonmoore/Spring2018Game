@@ -13,19 +13,31 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
   - m_Name: Vertical
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
   - m_Name: Moving
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
+=======
+    m_Controller: {fileID: 0}
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -307,7 +319,11 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+<<<<<<< HEAD
   m_Name: faceLeftwards02
+=======
+  m_Name: faceLeftWards02
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

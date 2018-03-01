@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 Base path: C:/Users/Public/Documents/Unity Download/Editor/Data
 Cmd: getPlatforms
+=======
+Base path: C:/Program Files/Unity/Editor/Data
+Cmd: initializeCompiler
+>>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
