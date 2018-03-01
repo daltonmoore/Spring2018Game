@@ -8,6 +8,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     public Animator anim;
     public String[] animFacingStates = new String[4];
     public static PlayerControllerVer2 playerController;
+    public bool canGrab;
 
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
@@ -28,7 +29,7 @@ public class PlayerControllerVer2 : MonoBehaviour
             if (rigid == null)
                 rigid = GetComponent<Rigidbody2D>();
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             print(e.StackTrace);
         }
@@ -42,6 +43,18 @@ public class PlayerControllerVer2 : MonoBehaviour
         if (!anim.GetBool("Moving"))
         {
             setSpriteFacing();
+        }
+        grab();
+    }
+
+    void grab()
+    {
+        if(canGrab)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                print("starting grab query");
+            }
         }
     }
 

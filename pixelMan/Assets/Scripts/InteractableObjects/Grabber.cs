@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintingGrab : MonoBehaviour
+public class Grabber : MonoBehaviour
 {
-    PlayerControllerVer3 p;
+    GameObject painting;
+    PlayerControllerVer2 p;
 
     // Use this for initialization
     void Start ()
     {
-        	p = GetComponentInParent<PlayerControllerVer3>();
+        	p = GetComponentInParent<PlayerControllerVer2>();
     }
 	
 	// Update is called once per frame
@@ -20,17 +21,15 @@ public class PaintingGrab : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "InteractableObject" && !p.getCanGrab())
+        print("entered");
+        if (other.tag == "PaintingGrab")
         {
-            p.setCanGrab(true);
-            print("CAN GRAB");
-            p.setPainting(other.gameObject);
+            p.canGrab = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        p.setCanGrab(false);
-        print("CAN NOT GRAB");
+        p.canGrab = false;
     }
 }

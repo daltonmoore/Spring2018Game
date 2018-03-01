@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - InteractableObject
-  - InteractableBox
+  - Painting
+  - PaintingGrab
   layers:
   - Default
   - TransparentFX
@@ -43,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Layer1
+    uniqueID: 1279009113
     locked: 0
   - name: Front
     uniqueID: 3572324289

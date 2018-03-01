@@ -6,15 +6,18 @@ using UnityEngine;
 
 public class PlayerControllerVer3 : MonoBehaviour
 {
+    public float speed;
     bool canGrab, grabbed;
     bool inPlace0, inPlace1, inPlace2; //player is in front of locations to place paintings on wall
     float x, y;
     GameObject painting;
+    Rigidbody2D rigid;
     Transform paintingSlot0, paintingSlot1, paintingSlot2;
 
     // Use this for initialization
     void Start ()
     {
+        rigid = GetComponent<Rigidbody2D>();
         try
         {
             paintingSlot0 = GameObject.Find("PaintingSlot0").transform;
@@ -33,7 +36,7 @@ public class PlayerControllerVer3 : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal") * Time.fixedDeltaTime;
         y = Input.GetAxis("Vertical") * Time.fixedDeltaTime;
-        transform.position += new Vector3(x, y);
+        rigid.AddForce(new Vector2(x*speed, y*speed));
 
         if (Input.GetKeyDown(KeyCode.E) && painting != null)
         {
@@ -56,6 +59,16 @@ public class PlayerControllerVer3 : MonoBehaviour
     public bool getCanGrab()
     {
         return canGrab;
+    }
+
+    public void setGrabbed(bool grabbed)
+    {
+        this.grabbed = grabbed;
+    }
+
+    public bool getGrabbed()
+    {
+        return grabbed;
     }
 
     public void setInPlace(int i)
