@@ -5,31 +5,58 @@ using UnityEngine;
 public class Grabber : MonoBehaviour
 {
     GameObject painting;
-    PlayerControllerVer2 p;
+    PaintingSlot paintingSlot;
+    bool inPaintingTrigger, hasPainting;
+    Sprite paintingSprite;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        	p = GetComponentInParent<PlayerControllerVer2>();
+
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
 
-	}
-
-    private void OnTriggerEnter2D(Collider2D other)
+    // Update is called once per frame
+    void Update()
     {
-        print("entered");
-        if (other.tag == "PaintingGrab")
+        grab();
+    }
+
+    void grab()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && inPaintingTrigger && !hasPainting)//you are in range to grab the painting and you press the grab button and you don't have a painting
         {
-            p.canGrab = true;
+            painting.SetActive(false);
+        }
+        else if(Input.GetKeyDown(KeyCode.E)) //you press e 
+        {
+            print("cannot grab");
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void placer()
     {
-        p.canGrab = false;
+
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PaintingGrab")
+        {
+            inPaintingTrigger = true;
+            painting = other.transform.parent.gameObject;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "PaintingGrab")
+        {
+            inPaintingTrigger = false;
+        }
+    }   
 }
