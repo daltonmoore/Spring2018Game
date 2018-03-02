@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-<<<<<<< HEAD
-# Visual Studio 2015
-=======
 # Visual Studio 2017
->>>>>>> 9c3150192ec05fb7801886791c5f92acffd2f6fd
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pixelMan", "pixelMan.csproj", "{688816F7-6EA8-D74B-6C61-348D7B8E06F9}"
 EndProject
 Global
