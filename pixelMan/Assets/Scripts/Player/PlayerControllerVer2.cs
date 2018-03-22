@@ -8,6 +8,11 @@ public class PlayerControllerVer2 : MonoBehaviour
     public Animator anim;
     public String[] animFacingStates = new String[4];
     public static PlayerControllerVer2 playerController;
+    public bool canGrab;
+    public TextBoxManager tbm;
+    public bool canMove = true;
+
+    public TextAsset paintingText;
 
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
@@ -42,6 +47,30 @@ public class PlayerControllerVer2 : MonoBehaviour
         if (!anim.GetBool("Moving"))
         {
             setSpriteFacing();
+        }
+        grab();
+        inspectPortrait();
+    }
+
+    void grab()
+    {
+        if(canGrab)
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                tbm.StartDialog(paintingText);
+            }
+        }
+    }
+
+    void inspectPortrait()
+    {
+        if (canGrab)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                tbm.StartDialog(paintingText);
+            }
         }
     }
 
@@ -87,6 +116,12 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     void move(float x, float y)
     {
+        //if user isnt allowed to move, return out of func
+        if (!canMove)
+        {
+            rigid.velocity = new Vector2(0, 0);
+            return;
+        }
         anim.SetFloat("Horizontal", x);
         anim.SetFloat("Vertical", y);
         anim.SetBool("Moving", x != 0 || y != 0);

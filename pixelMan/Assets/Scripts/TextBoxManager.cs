@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class TextBoxManager : MonoBehaviour {
 
-    public GameObject textBox;
+    public GameObject dialogPanel;
 
-    public Text theText;
+    public Text textOutput;
 
     public TextAsset textFile;
     public string[] textLines;
@@ -15,13 +15,15 @@ public class TextBoxManager : MonoBehaviour {
     public int curLine;
     public int endLine;
 
-    public PlayerController player;
+    public PlayerControllerVer2 player;
 
     // Use this for initialization
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerControllerVer2>();
 
+        endLine = 0;
+        curLine = 0;
 
         if (textFile != null)
         {
@@ -32,20 +34,44 @@ public class TextBoxManager : MonoBehaviour {
         {
             endLine = textLines.Length - 1;
         }
+
+        dialogPanel.SetActive(false);
+    }
+
+    //turns on the textbox and sets its text object
+    public void StartDialog(TextAsset newTextFile)
+    {
+        if(newTextFile != null)
+        {
+            //load new text file into text manager
+            textLines = (newTextFile.text.Split('\n'));
+            //reset line counter
+            curLine = 0;
+            endLine = textLines.Length - 1;
+            //enable the dialog panel
+            dialogPanel.SetActive(true);
+            player.canMove = false;
+        }
+        else
+        {
+            Debug.LogError("Empty Text File!");
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        theText.text = textLines[curLine];
+        textOutput.text = textLines[curLine];
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
             curLine++;
             if (curLine > endLine)
             {
-                textBox.SetActive(false);
+                dialogPanel.SetActive(false);
                 curLine = 0;
+                player.canMove = true;
             }
         }
 

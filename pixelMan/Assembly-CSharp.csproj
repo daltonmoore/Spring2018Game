@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CanvasController.cs" />
+     <Compile Include="Assets\Scripts\DialogPanel.cs" />
      <Compile Include="Assets\Scripts\Enemy\SlimeBallTrigger.cs" />
      <Compile Include="Assets\Scripts\Enemy\SlimeController.cs" />
      <Compile Include="Assets\Scripts\InteractableObjects\boxGrab.cs" />
@@ -68,6 +69,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerControllerVer3.cs" />
      <Compile Include="Assets\Scripts\TextBoxManager.cs" />
      <Compile Include="Assets\Scripts\TextImporter.cs" />
+     <None Include="Assets\Text\painting.txt" />
      <None Include="Assets\Text\test.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>H:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
