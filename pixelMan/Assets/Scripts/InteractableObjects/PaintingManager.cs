@@ -1,44 +1,54 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintingManager : MonoBehaviour
+class PaintingManager : MonoBehaviour
 {
-    Painting[] paintings;
-    PlayerControllerVer2 player;
+    public PaintingManager singleton;
+    public GameObject paintingPrefab;
+    ArrayList paintingList = new ArrayList();
 
-	// Use this for initialization
-	void Start ()
-    {
-        GameObject[] tempFrames = GameObject.FindGameObjectsWithTag("Painting");
-        GameObject[] tempGrabs = GameObject.FindGameObjectsWithTag("PaintingGrab");
-        paintings = new Painting[tempFrames.Length];
+    private PaintingManager()
+    { 
+        
+    }
 
-        for (int i = 0; i < tempFrames.Length; i++)
-        {
-            paintings[i] = new Painting(tempFrames[i], tempGrabs[i]);
-            print(paintings[i]);
-        }
-        player = GameObject.Find("Player").GetComponent<PlayerControllerVer2>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    private void Awake()
     {
-        for (int i = 0; i < paintings.Length; i++)
-        {
-            
-        }
-	}
+        singleton = new PaintingManager();
+    }
+
+    public void CreateAnotherPainting(Transform t)
+    {
+        GameObject g = Instantiate(paintingPrefab);
+        Painting p = new Painting(paintingPrefab.GetComponent<SpriteRenderer>(),
+            paintingPrefab.GetComponent<Rigidbody2D>(),
+            paintingPrefab.GetComponent<BoxCollider2D>(), t, g);
+        paintingList.Add(p);
+        
+    }
+   
 }
-
 struct Painting
 {
-    GameObject paintingFrame, paintingGrabSlot;
+    GameObject painting;
+    SpriteRenderer paintingSpriteRenderer;
+    Rigidbody2D paintingRigid;
+    BoxCollider2D paintingBoxCollider;
+    Transform paintingTransform;
 
-    public Painting(GameObject pf, GameObject pg)
+    public Painting(SpriteRenderer s, Rigidbody2D r, BoxCollider2D b, Transform t, GameObject p)
     {
-        paintingFrame = pf;
-        paintingGrabSlot = pg;
+        paintingSpriteRenderer = s;
+        paintingRigid = r;
+        paintingBoxCollider = b;
+        paintingTransform = t;
+        painting = p;
+    }
+
+    public GameObject getGameObject()
+    {
+        return painting;
     }
 }
+
+
