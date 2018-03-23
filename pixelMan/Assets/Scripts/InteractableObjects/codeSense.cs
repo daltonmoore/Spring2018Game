@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class codeSense : MonoBehaviour
+public class CodeSense : MonoBehaviour
 {
-    public PlayerControllerVer3 player;
 	// Use this for initialization
 	void Start ()
     {
@@ -18,27 +17,12 @@ public class codeSense : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        checkTile(collision.gameObject);
+        if (collision.name == "Painting01" && name == "PaintingCodeSlot1")
+            print("Yeah thats the right painting for slot 1");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
 
-    }
-
-    void checkTile(GameObject o)
-    {
-        switch (name)
-        {
-            case "InFrontOfSlot0":
-                player.setInPlace(0);
-                break;
-            case "InFrontOfSlot1":
-                player.setInPlace(1);
-                break;
-            case "InFrontOfSlot2":
-                player.setInPlace(2);
-                break;
-        }
     }
 }

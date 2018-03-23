@@ -15,6 +15,7 @@ public class PaintingSlot : MonoBehaviour
     {
         if (collision.tag == "Painting")
         {
+            print("PAINTING HERE");
             paintingPresent = true;
         }
     }

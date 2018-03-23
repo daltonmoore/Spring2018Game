@@ -10,6 +10,7 @@ public class Grabber : MonoBehaviour
     GameObject paintingCodeSlot;
     bool playerInGrabOrPlaceTrigger, playerHasPainting = false;
     bool playerInCodeTrigger;
+    bool paintingCodeOneCorrect, paintingCodeTwoCorrect, paintingCodeThreeCorrect;
 
     // Use this for initialization
     void Start()
@@ -59,7 +60,7 @@ public class Grabber : MonoBehaviour
                         print("Dude get a painting");
                         return;
                     }
-                    else
+                    else if(paintingCodeSlot.has)
                     {
                         painting.transform.position = paintingCodeSlot.transform.position;
                         painting.transform.localScale = new Vector3(.05f,.05f);
@@ -92,6 +93,7 @@ public class Grabber : MonoBehaviour
             playerInGrabOrPlaceTrigger = true;
             currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
             currentPaintingSlotID = currentPaintingSlot.name;
+
             if (!playerHasPainting)
             {
                 painting = GameObject.Find("Painting" + currentPaintingSlotID);
