@@ -41,6 +41,7 @@ public class Grabber : MonoBehaviour
                         {
                             playerHasPainting = true;
                             painting.SetActive(false);
+
                         }
                     }
                     else //you have a painting
