@@ -54,16 +54,17 @@ public class Grabber : MonoBehaviour
                 }
                 if (playerInCodeTrigger)
                 {
+                    print("Player is in a code trigger");
                     grabTimer = Time.time;
-                    if(!playerHasPainting)
+                    if(currentPaintingSlot.hasPainting())
                     {
-                        print("Dude get a painting");
-                        return;
+                        playerHasPainting = true;
+                        painting.SetActive(false);
                     }
-                    else if(paintingCodeSlot.has)
+                    else if(!currentPaintingSlot.hasPainting() && playerHasPainting)
                     {
                         painting.transform.position = paintingCodeSlot.transform.position;
-                        painting.transform.localScale = new Vector3(.05f,.05f);
+                        //painting.transform.localScale = new Vector3(.05f,.05f);
                         painting.SetActive(true);
                         playerHasPainting = false;
                     }
@@ -78,6 +79,7 @@ public class Grabber : MonoBehaviour
         {
             print("That's the right painting");
             painting.SetActive(true);
+            painting.transform.position = currentPaintingSlot.transform.position;
             playerHasPainting = false;
         }
         else
@@ -104,6 +106,8 @@ public class Grabber : MonoBehaviour
         {
             playerInCodeTrigger = true;
             paintingCodeSlot = other.transform.parent.gameObject;
+            currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
+            currentPaintingSlotID = currentPaintingSlot.name;
         }
     }
 

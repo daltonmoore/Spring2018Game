@@ -5,6 +5,7 @@ using UnityEngine;
 public class PaintingSlot : MonoBehaviour
 {
     bool paintingPresent;
+    bool codeSatisfied;
 
     private void Update()
     {
@@ -17,7 +18,24 @@ public class PaintingSlot : MonoBehaviour
         {
             print("PAINTING HERE");
             paintingPresent = true;
+            if (name == "PaintingCodeSlot1" && collision.name == "Painting01")
+            {
+                codeSatisfied = true;
+            }
+            if (name == "PaintingCodeSlot2" && collision.name == "Painting02")
+            {
+                codeSatisfied = true;
+            }
+            if (name == "PaintingCodeSlot3" && collision.name == "Painting03")
+            {
+                codeSatisfied = true;
+            }
         }
+    }
+
+    public bool getCodeSatisfied()
+    {
+        return codeSatisfied;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -25,6 +43,18 @@ public class PaintingSlot : MonoBehaviour
         if (collision.tag == "Painting")
         {
             paintingPresent = false;
+            if (name == "PaintingCodeSlot1" && collision.name == "Painting01")
+            {
+                codeSatisfied = false;
+            }
+            if (name == "PaintingCodeSlot2" && collision.name == "Painting02")
+            {
+                codeSatisfied = false;
+            }
+            if (name == "PaintingCodeSlot3" && collision.name == "Painting03")
+            {
+                codeSatisfied = false;
+            }
         }
     }
 
