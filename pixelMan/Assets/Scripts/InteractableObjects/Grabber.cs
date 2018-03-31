@@ -101,6 +101,7 @@ public class Grabber : MonoBehaviour
             {
                 painting = GameObject.Find("Painting" + currentPaintingSlotID);
             }
+            paintingNumber();
         }
 
         if(other.tag == "PaintingCodeGrab")
@@ -109,7 +110,9 @@ public class Grabber : MonoBehaviour
             paintingCodeSlot = other.transform.parent.gameObject;
             currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
             currentPaintingSlotID = currentPaintingSlot.name;
+            paintingNumber();
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -119,6 +122,14 @@ public class Grabber : MonoBehaviour
             playerInGrabOrPlaceTrigger = false;
             playerInCodeTrigger = false;
         }
+    }
+
+    int paintingNumber()
+    {
+        int n;
+        int.TryParse(currentPaintingSlotID, out n);
+        print(n);
+        return n;
     }
        
 }
