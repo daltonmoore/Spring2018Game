@@ -1457,6 +1457,7 @@ MonoBehaviour:
   curLine: 0
   endLine: 0
   player: {fileID: 1402021025}
+  BlankTextFile: {fileID: 4900000, guid: 76138044a60662044bd92c40d44b6d81, type: 3}
 --- !u!4 &682653700
 Transform:
   m_ObjectHideFlags: 0
@@ -2436,10 +2437,11 @@ MonoBehaviour:
   - 
   - 
   - 
-  canGrab: 0
   tbm: {fileID: 682653699}
   canMove: 1
-  paintingText: {fileID: 4900000, guid: 8551ca387070f7d4ea1cf79f46ed0e9c, type: 3}
+  grabber: {fileID: 2074573169}
+  NextToPainting: 0
+  missingText: 0
 --- !u!1 &1409636474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +2756,11 @@ Prefab:
       propertyPath: m_Name
       value: Painting01
       objectReference: {fileID: 0}
+    - target: {fileID: 114587796685750212, guid: 5ae83807072428948a819988157e9e9a,
+        type: 2}
+      propertyPath: PaintingText
+      value: 
+      objectReference: {fileID: 4900000, guid: 8551ca387070f7d4ea1cf79f46ed0e9c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ae83807072428948a819988157e9e9a, type: 2}
   m_IsPrefabParent: 0

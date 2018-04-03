@@ -8,11 +8,12 @@ public class PlayerControllerVer2 : MonoBehaviour
     public Animator anim;
     public String[] animFacingStates = new String[4];
     public static PlayerControllerVer2 playerController;
-    public bool canGrab;
     public TextBoxManager tbm;
     public bool canMove = true;
-
-    public TextAsset paintingText;
+    public Grabber grabber;
+    public bool NextToPainting;
+    private TextAsset PaintingText;
+    public bool missingText;
 
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
@@ -26,6 +27,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     void Start ()
     {
+        NextToPainting = false;
         try
         {
             if (anim == null)
@@ -41,7 +43,6 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     private void Update()
     {
-        
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         move(x, y);
@@ -55,22 +56,23 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     void grab()
     {
-        if(canGrab)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                tbm.StartDialog(paintingText);
-            }
+            grabber.checkGrab();
         }
     }
 
     void inspectPortrait()
     {
-        if (canGrab)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if(PaintingText != null)
             {
-                tbm.StartDialog(paintingText);
+                tbm.StartDialog(PaintingText);
+            }
+            else if (missingText)
+            {
+                tbm.MissingDialog();
             }
         }
     }
@@ -113,6 +115,15 @@ public class PlayerControllerVer2 : MonoBehaviour
         {
             facing = "forwards";
         }
+    }
+
+    public void SetPaintingText(TextAsset asset)
+    {
+        PaintingText = asset;
+    }
+    public void ClearPaintingText()
+    {
+        PaintingText = null;
     }
 
     void move(float x, float y)
