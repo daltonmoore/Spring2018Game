@@ -70,7 +70,7 @@ public class TextBoxManager : MonoBehaviour {
     {
         textOutput.text = textLines[curLine];
 
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
         {
             curLine++;
             if (curLine > endLine)
