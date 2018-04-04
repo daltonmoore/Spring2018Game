@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextBoxManager : MonoBehaviour {
+public class TextBoxManager : MonoBehaviour
+{
 
     public GameObject dialogPanel;
 
@@ -16,6 +17,8 @@ public class TextBoxManager : MonoBehaviour {
     public int endLine;
 
     public PlayerControllerVer2 player;
+
+    public TextAsset BlankTextFile;
 
     // Use this for initialization
     void Start()
@@ -30,7 +33,7 @@ public class TextBoxManager : MonoBehaviour {
             textLines = (textFile.text.Split('\n'));
         }
 
-        if(endLine == 0)
+        if (endLine == 0)
         {
             endLine = textLines.Length - 1;
         }
@@ -41,7 +44,7 @@ public class TextBoxManager : MonoBehaviour {
     //turns on the textbox and sets its text object
     public void StartDialog(TextAsset newTextFile)
     {
-        if(newTextFile != null)
+        if (newTextFile != null)
         {
             //load new text file into text manager
             textLines = (newTextFile.text.Split('\n'));
@@ -58,13 +61,17 @@ public class TextBoxManager : MonoBehaviour {
         }
 
     }
+    public void MissingDialog()
+    {
+        StartDialog(BlankTextFile);
+    }
 
     // Update is called once per frame
     void Update()
     {
         textOutput.text = textLines[curLine];
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
         {
             curLine++;
             if (curLine > endLine)
@@ -75,6 +82,6 @@ public class TextBoxManager : MonoBehaviour {
             }
         }
 
-        
+
     }
 }

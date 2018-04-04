@@ -6,6 +6,7 @@ public class PaintingSlot : MonoBehaviour
 {
     bool paintingPresent;
     bool codeSatisfied;
+    public TextAsset PaintingText;
 
     private void Update()
     {
