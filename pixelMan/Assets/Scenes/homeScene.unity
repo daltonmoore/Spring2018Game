@@ -2471,7 +2471,7 @@ MonoBehaviour:
   - 
   tbm: {fileID: 682653699}
   canMove: 1
-  grabber: {fileID: 0}
+  grabber: {fileID: 2074573169}
   NextToPainting: 0
   missingText: 0
 --- !u!1 &1409636474

@@ -43,6 +43,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     private void Update()
     {
+        anim.SetBool("HasPainting", grabber.getPlayerHasPainting());
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         move(x, y);

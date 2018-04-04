@@ -25,6 +25,10 @@ public class Grabber : MonoBehaviour
         //checkGrab();
     }
 
+    public bool getPlayerHasPainting()
+    {
+        return playerHasPainting;
+    }
 
     float grabTimer;
     public void checkGrab()
