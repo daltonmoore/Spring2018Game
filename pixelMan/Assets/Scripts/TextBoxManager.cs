@@ -17,8 +17,6 @@ public class TextBoxManager : MonoBehaviour {
 
     public PlayerControllerVer2 player;
 
-    public TextAsset BlankTextFile;
-
     // Use this for initialization
     void Start()
     {
@@ -60,17 +58,13 @@ public class TextBoxManager : MonoBehaviour {
         }
 
     }
-    public void MissingDialog()
-    {
-        StartDialog(BlankTextFile);
-    }
 
     // Update is called once per frame
     void Update()
     {
         textOutput.text = textLines[curLine];
 
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             curLine++;
             if (curLine > endLine)

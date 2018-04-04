@@ -11,23 +11,19 @@ public class Grabber : MonoBehaviour
     bool playerInGrabOrPlaceTrigger, playerHasPainting = false;
     bool playerInCodeTrigger;
     bool paintingCodeOneCorrect, paintingCodeTwoCorrect, paintingCodeThreeCorrect;
-<<<<<<< HEAD
     int slotNumber;
     public GameObject[] paintingBuffer = new GameObject[3];
-=======
-    PlayerControllerVer2 controller;
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
 
     // Use this for initialization
     void Start()
     {
-        controller = GetComponentInParent<PlayerControllerVer2>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //checkGrab();
+        checkGrab();
     }
 
     public bool getPlayerHasPainting()
@@ -41,22 +37,22 @@ public class Grabber : MonoBehaviour
     }
 
     float grabTimer;
-    public void checkGrab()
+    void checkGrab()
     {
         if (grabTimer + 1 < Time.time)
         {
-            if (playerInGrabOrPlaceTrigger)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                grabTimer = Time.time;
-                if (!playerHasPainting)//you don't have a painting
+                if (playerInGrabOrPlaceTrigger)
                 {
-                    if (currentPaintingSlot.hasPainting())
+                    grabTimer = Time.time;
+                    if (!playerHasPainting)//you don't have a painting
                     {
-                        playerHasPainting = true;
-                        painting.SetActive(false);
-                        controller.NextToPainting = false;
+                        if (currentPaintingSlot.hasPainting())
+                        {
+                            playerHasPainting = true;
+                            painting.SetActive(false);
 
-<<<<<<< HEAD
                         }
                     }
                     else //you have a painting
@@ -68,13 +64,10 @@ public class Grabber : MonoBehaviour
                             Time.timeScale = 0;
                         }
                         placer();
-=======
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
                     }
                 }
-                else //you have a painting
+                if (playerInCodeTrigger)
                 {
-<<<<<<< HEAD
                     if (!currentPaintingSlot.hasPainting())
                     {
                         int.TryParse(currentPaintingSlotID.Substring(16), out slotNumber);
@@ -89,30 +82,12 @@ public class Grabber : MonoBehaviour
                         painting.SetActive(false);
                     }
                     else if(!currentPaintingSlot.hasPainting() && playerHasPainting)
-=======
-                    if (currentPaintingSlot.hasPainting())
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
                     {
-                        print("Slot already has painting");
+                        painting.transform.position = paintingCodeSlot.transform.position;
+                        //painting.transform.localScale = new Vector3(.05f,.05f);
+                        painting.SetActive(true);
+                        playerHasPainting = false;
                     }
-                    placer();
-                }
-            }
-            if (playerInCodeTrigger)
-            {
-                print("Player is in a code trigger");
-                grabTimer = Time.time;
-                if(currentPaintingSlot.hasPainting())
-                {
-                    playerHasPainting = true;
-                    painting.SetActive(false);
-                }
-                else if(!currentPaintingSlot.hasPainting() && playerHasPainting)
-                {
-                    painting.transform.position = paintingCodeSlot.transform.position;
-                    //painting.transform.localScale = new Vector3(.05f,.05f);
-                    painting.SetActive(true);
-                    playerHasPainting = false;
                 }
             }
         }
@@ -141,25 +116,10 @@ public class Grabber : MonoBehaviour
             currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
             currentPaintingSlotID = currentPaintingSlot.name;
 
-
-            controller.NextToPainting = true;
-            //push text from painting slot into character controller so they can read it
-            if (currentPaintingSlot.PaintingText != null)
-            {
-                controller.SetPaintingText(currentPaintingSlot.PaintingText);
-            }
-            else
-            {
-                print("missing text");
-                controller.missingText = true;
-            }
-            
-
             if (!playerHasPainting)
             {
                 painting = GameObject.Find("Painting" + currentPaintingSlotID);
             }
-            paintingNumber();
         }
 
         if(other.tag == "PaintingCodeGrab")
@@ -168,17 +128,12 @@ public class Grabber : MonoBehaviour
             paintingCodeSlot = other.transform.parent.gameObject;
             currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
             currentPaintingSlotID = currentPaintingSlot.name;
-<<<<<<< HEAD
 
             int.TryParse(currentPaintingSlotID.Substring(16), out slotNumber);
 
             if (paintingBuffer[slotNumber] != null && painting.name == paintingBuffer[slotNumber].name)
                 painting = paintingBuffer[slotNumber];
-=======
-            paintingNumber();
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -187,17 +142,7 @@ public class Grabber : MonoBehaviour
         {
             playerInGrabOrPlaceTrigger = false;
             playerInCodeTrigger = false;
-            controller.NextToPainting = false;
-            controller.ClearPaintingText();
         }
-    }
-
-    int paintingNumber()
-    {
-        int n;
-        int.TryParse(currentPaintingSlotID, out n);
-        print(n);
-        return n;
     }
        
 }

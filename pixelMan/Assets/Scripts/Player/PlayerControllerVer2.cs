@@ -7,22 +7,12 @@ public class PlayerControllerVer2 : MonoBehaviour
 {
     public Animator anim;
     public String[] animFacingStates = new String[4];
-<<<<<<< HEAD
     public bool canGrab;
     public TextBoxManager tbm;
     public bool canMove = true;
     public Grabber grabber;
 
     public TextAsset paintingText;
-=======
-    public static PlayerControllerVer2 playerController;
-    public TextBoxManager tbm;
-    public bool canMove = true;
-    public Grabber grabber;
-    public bool NextToPainting;
-    private TextAsset PaintingText;
-    public bool missingText;
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
 
     Rigidbody2D rigid;
     SpriteRenderer spriteRenderer;
@@ -35,7 +25,6 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     void Start ()
     {
-        NextToPainting = false;
         try
         {
             if (anim == null)
@@ -51,6 +40,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     private void Update()
     {
+        
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         move(x, y);
@@ -59,7 +49,6 @@ public class PlayerControllerVer2 : MonoBehaviour
             setSpriteFacing();
         }
         inspectPortrait();
-<<<<<<< HEAD
         if(grabber.getPlayerHasPainting())
         {
             anim.SetBool("HasPainting", true);
@@ -67,33 +56,16 @@ public class PlayerControllerVer2 : MonoBehaviour
         else
         {
             anim.SetBool("HasPainting", false);
-=======
-    }
-
-    void grab()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            grabber.checkGrab();
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
         }
     }
 
     void inspectPortrait()
     {
-<<<<<<< HEAD
         if (grabber.getPlayerInGrabOrPlaceTrigger())
-=======
-        if (Input.GetKeyDown(KeyCode.F))
->>>>>>> ecf25788738d7c72b9d09ef07f8b60f9f5c2d5b8
         {
-            if(PaintingText != null)
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                tbm.StartDialog(PaintingText);
-            }
-            else if (missingText)
-            {
-                tbm.MissingDialog();
+                tbm.StartDialog(paintingText);
             }
         }
     }
@@ -136,15 +108,6 @@ public class PlayerControllerVer2 : MonoBehaviour
         {
             facing = "forwards";
         }
-    }
-
-    public void SetPaintingText(TextAsset asset)
-    {
-        PaintingText = asset;
-    }
-    public void ClearPaintingText()
-    {
-        PaintingText = null;
     }
 
     void move(float x, float y)
