@@ -7,10 +7,10 @@ public class PlayerControllerVer2 : MonoBehaviour
 {
     public Animator anim;
     public String[] animFacingStates = new String[4];
+    public static PlayerControllerVer2 playerController;
     public bool canGrab;
     public TextBoxManager tbm;
     public bool canMove = true;
-    public Grabber grabber;
 
     public TextAsset paintingText;
 
@@ -20,6 +20,7 @@ public class PlayerControllerVer2 : MonoBehaviour
 
     private void Awake()
     {
+        playerController = GetComponent<PlayerControllerVer2>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -48,20 +49,24 @@ public class PlayerControllerVer2 : MonoBehaviour
         {
             setSpriteFacing();
         }
+        grab();
         inspectPortrait();
-        if(grabber.getPlayerHasPainting())
+    }
+
+    void grab()
+    {
+        if(canGrab)
         {
-            anim.SetBool("HasPainting", true);
-        }
-        else
-        {
-            anim.SetBool("HasPainting", false);
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                tbm.StartDialog(paintingText);
+            }
         }
     }
 
     void inspectPortrait()
     {
-        if (grabber.getPlayerInGrabOrPlaceTrigger())
+        if (canGrab)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {

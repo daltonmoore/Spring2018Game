@@ -11,8 +11,6 @@ public class Grabber : MonoBehaviour
     bool playerInGrabOrPlaceTrigger, playerHasPainting = false;
     bool playerInCodeTrigger;
     bool paintingCodeOneCorrect, paintingCodeTwoCorrect, paintingCodeThreeCorrect;
-    int slotNumber;
-    public GameObject[] paintingBuffer = new GameObject[3];
 
     // Use this for initialization
     void Start()
@@ -26,15 +24,6 @@ public class Grabber : MonoBehaviour
         checkGrab();
     }
 
-    public bool getPlayerHasPainting()
-    {
-        return playerHasPainting;
-    }
-
-    public bool getPlayerInGrabOrPlaceTrigger()
-    {
-        return playerInGrabOrPlaceTrigger;
-    }
 
     float grabTimer;
     void checkGrab()
@@ -60,24 +49,16 @@ public class Grabber : MonoBehaviour
                         if (currentPaintingSlot.hasPainting())
                         {
                             print("Slot already has painting");
-                            CanvasController.singleton.popUpCantPlace.SetActive(true);
-                            Time.timeScale = 0;
                         }
                         placer();
                     }
                 }
                 if (playerInCodeTrigger)
                 {
-                    if (!currentPaintingSlot.hasPainting())
-                    {
-                        int.TryParse(currentPaintingSlotID.Substring(16), out slotNumber);
-                        paintingBuffer[slotNumber] = painting;
-                    }
-
+                    print("Player is in a code trigger");
                     grabTimer = Time.time;
-                    if(currentPaintingSlot.hasPainting() && !playerHasPainting)
+                    if(currentPaintingSlot.hasPainting())
                     {
-                        painting = paintingBuffer[slotNumber];
                         playerHasPainting = true;
                         painting.SetActive(false);
                     }
@@ -128,11 +109,6 @@ public class Grabber : MonoBehaviour
             paintingCodeSlot = other.transform.parent.gameObject;
             currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
             currentPaintingSlotID = currentPaintingSlot.name;
-
-            int.TryParse(currentPaintingSlotID.Substring(16), out slotNumber);
-
-            if (paintingBuffer[slotNumber] != null && painting.name == paintingBuffer[slotNumber].name)
-                painting = paintingBuffer[slotNumber];
         }
     }
 

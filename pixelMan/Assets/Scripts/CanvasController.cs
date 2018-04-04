@@ -5,32 +5,17 @@ using UnityEngine.UI;
 
 public class CanvasController : MonoBehaviour
 {
-    public static CanvasController singleton;
-
-    public GameObject popUpCantPlace;
-    public Button popUpCantPlaceButton;
-
-    private CanvasController()
-    {
-
-    }
+    public Slider healthBar;
 
 	void Start ()
     {
-        singleton = this;
-        popUpCantPlace.SetActive(false);        
-        popUpCantPlaceButton.onClick.AddListener(closeCantPlacePopUp);
-
+        healthBar.maxValue = PlayerController.singleton.health;
+        healthBar.value = healthBar.maxValue;
 	}
 	
 	void Update ()
     {
-
+        if (healthBar.value != PlayerController.singleton.health)
+            healthBar.value = PlayerController.singleton.health;
 	}
-
-    void closeCantPlacePopUp()
-    {
-        popUpCantPlace.SetActive(false);
-        Time.timeScale = 1;
-    }
 }

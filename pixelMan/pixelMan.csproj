@@ -284,7 +284,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\CanvasController.cs" />
     <Compile Include="Assets\Scripts\DialogPanel.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeBallTrigger.cs" />
@@ -292,8 +291,9 @@
     <Compile Include="Assets\Scripts\InteractableObjects\boxGrab.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\boxGrabVer2.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\boxManager.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\CodeSense.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\Grabber.cs" />
-    <Compile Include="Assets\Scripts\InteractableObjects\PaintingCodeManager.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\PaintingManager.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingSlot.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\Utility\DoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
