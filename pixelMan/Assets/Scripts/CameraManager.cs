@@ -9,7 +9,7 @@ class CameraManager : MonoBehaviour
 {
     public Camera cam;
     public GameObject playerLoc;
-    bool xLocked;
+    bool xLockedRight, xLockedLeft;
     
     void Update()
     {
@@ -18,12 +18,29 @@ class CameraManager : MonoBehaviour
             if (playerLoc.transform.position.x >= 5.57f)
             {
                 cam.transform.position = new Vector3(5.57f, playerLoc.transform.position.y, -1f);
-                xLocked = true;
+                xLockedRight = true;
             }
+            else
+                xLockedRight = false;
+
+            if (playerLoc.transform.position.x <= -5.57f)
+            {
+                cam.transform.position = new Vector3(-5.57f, playerLoc.transform.position.y, -1f);
+                xLockedLeft = true;
+            }
+            else
+                xLockedLeft = false;
+
+
             if (playerLoc.transform.position.y <= -3.16f)
             {
-                if (xLocked)
-                    cam.transform.position = new Vector3(5.57f, -3.16f, -1f);
+                if (xLockedRight || xLockedLeft)
+                {
+                    if(xLockedRight)
+                        cam.transform.position = new Vector3(5.57f, -3.16f, -1f);
+                    if (xLockedLeft)
+                        cam.transform.position = new Vector3(-5.57f, -3.16f, -1f);
+                }
                 else
                     cam.transform.position = new Vector3(playerLoc.transform.position.x, -3.16f, -1f);
             }
