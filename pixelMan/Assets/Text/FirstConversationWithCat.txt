@@ -1,0 +1,7 @@
+“I’m glad you’re here. I was starting to wonder if you were going to show up. Come over here so we can talk.”
+“Well let’s get this out of the way first: You’re dead. Only thing left of you are the bones in this box.”
+“Do you remember anything?
+	-No
+	-Try to remember 
+“Figures as much. Well, you’re at the bottom of a dungeon under a city. The details aren’t really important: if you’re going to get your life or memories back, the only direction for us is up.”
+“First you’ll need your body though... or what’s left of it at least. Here, let me open this for you.”
