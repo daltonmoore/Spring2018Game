@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 50515326997850034}
   - component: {fileID: 61846336682711300}
   m_Layer: 0
-  m_Name: Painting03
+  m_Name: Painting01
   m_TagString: Painting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.9}
+  m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
 --- !u!61 &61846336682711300
 BoxCollider2D:
@@ -239,6 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19309f285bfa8d4cb788e28a6e716ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PaintingText: {fileID: 4900000, guid: 797c9f498b7749b458b6688ddb4e05b3, type: 3}
+  canvas: {fileID: 0}
 --- !u!212 &212314710712128602
 SpriteRenderer:
   m_ObjectHideFlags: 1

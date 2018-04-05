@@ -12,6 +12,10 @@ public class Grabber : MonoBehaviour
     bool playerInCodeTrigger;
     bool paintingCodeOneCorrect, paintingCodeTwoCorrect, paintingCodeThreeCorrect;
     PlayerControllerVer2 controller;
+    int currentCodeSlot;
+    public CanvasController canvas;
+
+    GameObject[] paintingBuffer = new GameObject[3];
 
     // Use this for initialization
     void Start()
@@ -59,7 +63,7 @@ public class Grabber : MonoBehaviour
             }
             if (playerInCodeTrigger)
             {
-                print("Player is in a code trigger");
+                print(painting);
                 grabTimer = Time.time;
                 if (currentPaintingSlot.hasPainting())
                 {
@@ -69,6 +73,7 @@ public class Grabber : MonoBehaviour
                 else if (!currentPaintingSlot.hasPainting() && playerHasPainting)
                 {
                     painting.transform.position = paintingCodeSlot.transform.position;
+                    paintingBuffer[currentCodeSlot-1] = painting;
                     //painting.transform.localScale = new Vector3(.05f,.05f);
                     painting.SetActive(true);
                     playerHasPainting = false;
@@ -89,6 +94,8 @@ public class Grabber : MonoBehaviour
         else
         {
             print("Your painting can't go into that slot");
+            canvas.CanNotPlacePaintingPopUp.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -118,7 +125,6 @@ public class Grabber : MonoBehaviour
             {
                 painting = GameObject.Find("Painting" + currentPaintingSlotID);
             }
-            paintingNumber();
         }
 
         if (other.tag == "PaintingCodeGrab")
@@ -127,9 +133,11 @@ public class Grabber : MonoBehaviour
             paintingCodeSlot = other.transform.parent.gameObject;
             currentPaintingSlot = other.gameObject.transform.parent.gameObject.GetComponent<PaintingSlot>();
             currentPaintingSlotID = currentPaintingSlot.name;
-            paintingNumber();
+            int.TryParse(currentPaintingSlotID.Substring(16), out currentCodeSlot);
+            print(currentCodeSlot);
+            if (!playerHasPainting)
+                painting = paintingBuffer[currentCodeSlot-1];
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -142,13 +150,4 @@ public class Grabber : MonoBehaviour
             controller.ClearPaintingText();
         }
     }
-
-    int paintingNumber()
-    {
-        int n;
-        int.TryParse(currentPaintingSlotID, out n);
-        print(n);
-        return n;
-    }
-
 }

@@ -7,6 +7,7 @@ public class PaintingSlot : MonoBehaviour
     bool paintingPresent;
     bool codeSatisfied;
     public TextAsset PaintingText;
+    public CanvasController canvas;
 
     private void Update()
     {
@@ -17,19 +18,24 @@ public class PaintingSlot : MonoBehaviour
     {
         if (collision.tag == "Painting")
         {
-            print("PAINTING HERE");
             paintingPresent = true;
             if (name == "PaintingCodeSlot1" && collision.name == "Painting01")
             {
                 codeSatisfied = true;
+                canvas.Code1CorrectPopUp.SetActive(true);
+                Time.timeScale = 0;
             }
             if (name == "PaintingCodeSlot2" && collision.name == "Painting02")
             {
                 codeSatisfied = true;
+                canvas.Code2CorrectPopUp.SetActive(true);
+                Time.timeScale = 0;
             }
             if (name == "PaintingCodeSlot3" && collision.name == "Painting03")
             {
                 codeSatisfied = true;
+                canvas.Code3CorrectPopUp.SetActive(true);
+                Time.timeScale = 0;
             }
         }
     }
