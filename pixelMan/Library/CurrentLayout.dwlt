@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 442}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 392}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 94
+  controlID: 51
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -115,8 +115,8 @@ MonoBehaviour:
     y: 0
     width: 407
     height: 543
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 442}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 392}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 96
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,14 +343,14 @@ MonoBehaviour:
     height: 926
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 7608.411651634306
+  lastFramingTime: 2113.9855041501078
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.26718584, y: -0.32713136, z: 2.7207031}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -0.26718584, y: -0.32713136, z: 2.7207031}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -378,9 +378,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.45718
+    m_Target: 36.349464
     speed: 2
-    m_Value: 14.45718
+    m_Value: 36.349464
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -498,9 +498,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7829feff
-    m_LastClickedID: -120456
-    m_ExpandedIDs: fe64feff6e68feff3a7dfeff1890feff5493feff42c9feffce98ffff249fffff9aa0ffff18a8ffff84b6ffffb0e3ffff98ebffff000000005c430000
+    m_SelectedIDs: 42390000
+    m_LastClickedID: 14658
+    m_ExpandedIDs: 3454fdffd85efdfff25ffdffec62fdff1e67fdffdc68fdff126bfdff9a87fdfffa8cfdff0604fffff679fffffef7ffff9efbffff00000000ee2a000040300000dc300000f430000038380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,19 +589,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Art
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Art
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\JSC\Spring2018Game\pixelMan
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: 50320000
-    m_LastClickedID: 12880
-    m_ExpandedIDs: 000000009a310000a6310000363200008e320000f2320000f432000014330000343500003635000000ca9a3bffffff7f
+    m_SelectedIDs: fa290000
+    m_LastClickedID: 10746
+    m_ExpandedIDs: 0000000088270000a6270000a428000040290000f6290000fa290000482a00004a2b00004c2b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -629,7 +629,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 36}
     m_SelectedIDs: aa2df7ff
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a310000a6310000363200008e320000f2320000f4320000143300003435000036350000
+    m_ExpandedIDs: 0000000088270000a6270000a428000040290000f6290000fa290000482a00004a2b00004c2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -657,21 +657,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: ea250000442400004a250000862a000094290000942600009477e2ff9a4eeaff746af6ff06cc0000ce4b0700342700003c27000086270100a6270100f05d00003e31000064400000da2600008226000038260000743c000000000000a6270000fc550000
+    m_ExpandedInstanceIDs: ea250000442400004a250000862a000094290000942600009477e2ff9a4eeaff746af6ff06cc0000ce4b0700342700003c27000086270100a6270100f05d00003e31000064400000da2600008226000038260000743c0000a6270000fc55000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: main menu
+      m_OriginalName: main menu
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10274
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 3}
     m_CreateAssetUtility:
