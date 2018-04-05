@@ -1236,6 +1236,14 @@ Prefab:
       propertyPath: PaintingText
       value: 
       objectReference: {fileID: 4900000, guid: b669b48d35e3ba44e88b1cb8e64d9026, type: 3}
+    - target: {fileID: 4466696559621672, guid: 5ae83807072428948a819988157e9e9a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466696559621672, guid: 5ae83807072428948a819988157e9e9a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ae83807072428948a819988157e9e9a, type: 2}
   m_IsPrefabParent: 0
@@ -1505,6 +1513,14 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466696559621672, guid: 5ae83807072428948a819988157e9e9a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.061
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466696559621672, guid: 5ae83807072428948a819988157e9e9a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.163
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ae83807072428948a819988157e9e9a, type: 2}
