@@ -9,5 +9,8 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene(0);//gets the scene dungeon 
     }
-	
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
