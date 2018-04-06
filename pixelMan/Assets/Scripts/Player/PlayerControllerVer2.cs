@@ -67,6 +67,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            grabber.canvas.inspectPopUp.SetActive(false);
             if (PaintingText != null)
             {
                 tbm.StartDialog(PaintingText);

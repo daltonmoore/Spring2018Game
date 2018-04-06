@@ -46,6 +46,7 @@ public class TextBoxManager : MonoBehaviour
     {
         if (newTextFile != null)
         {
+            Time.timeScale = 0;
             //load new text file into text manager
             textLines = (newTextFile.text.Split('\n'));
             //reset line counter
@@ -79,6 +80,7 @@ public class TextBoxManager : MonoBehaviour
                 dialogPanel.SetActive(false);
                 curLine = 0;
                 player.canMove = true;
+                Time.timeScale = 1;
             }
         }
 

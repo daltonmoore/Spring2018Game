@@ -125,6 +125,8 @@ public class Grabber : MonoBehaviour
             {
                 painting = GameObject.Find("Painting" + currentPaintingSlotID);
             }
+
+            canvas.inspectPopUp.SetActive(true);
         }
 
         if (other.tag == "PaintingCodeGrab")
@@ -148,6 +150,7 @@ public class Grabber : MonoBehaviour
             playerInCodeTrigger = false;
             controller.NextToPainting = false;
             controller.ClearPaintingText();
+            canvas.inspectPopUp.SetActive(false);
         }
     }
 }

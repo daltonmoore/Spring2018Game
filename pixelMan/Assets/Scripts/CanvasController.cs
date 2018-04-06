@@ -18,6 +18,8 @@ public class CanvasController : MonoBehaviour
     public GameObject Code3CorrectPopUp;
     Button code3CorrectAck;
 
+    public GameObject inspectPopUp;
+
     void Start ()
     {
         setUpButton(CanNotPlacePaintingPopUp, canNotPlacePaintingAck, CanNotPlacePaintingOk);
