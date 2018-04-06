@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 0dd84050dad20c748a50cad78fbe4ad0
+timeCreated: 1523020553
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Like Giselle?
+  fontNames:
+  - Like Giselle?
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
