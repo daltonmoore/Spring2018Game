@@ -16,6 +16,8 @@ public class TextBoxManager : MonoBehaviour
     public int curLine;
     public int endLine;
 
+    public bool inDialog = false;
+
     public PlayerControllerVer2 player;
 
     public TextAsset BlankTextFile;
@@ -46,6 +48,7 @@ public class TextBoxManager : MonoBehaviour
     {
         if (newTextFile != null)
         {
+            inDialog = true;
             Time.timeScale = 0;
             //load new text file into text manager
             textLines = (newTextFile.text.Split('\n'));
@@ -81,6 +84,7 @@ public class TextBoxManager : MonoBehaviour
                 curLine = 0;
                 player.canMove = true;
                 Time.timeScale = 1;
+                inDialog = false;
             }
         }
 

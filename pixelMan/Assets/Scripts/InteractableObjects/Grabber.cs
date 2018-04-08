@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Grabber : MonoBehaviour
 {
+    public bool catDungeonDialog;
     string currentPaintingSlotID;
     PaintingSlot currentPaintingSlot;
     GameObject painting;
@@ -101,6 +102,10 @@ public class Grabber : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.tag == "CatDialog")
+        {
+            catDungeonDialog = true;
+        }
         if (other.tag == "PaintingGrab")//grabtrigger tells you that you are in front of the painting slot
         {
             playerInGrabOrPlaceTrigger = true;

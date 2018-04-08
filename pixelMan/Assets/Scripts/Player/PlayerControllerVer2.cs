@@ -13,6 +13,7 @@ public class PlayerControllerVer2 : MonoBehaviour
     public Grabber grabber;
     public bool NextToPainting;
     private TextAsset PaintingText;
+
     public bool missingText;
 
     Rigidbody2D rigid;
@@ -67,7 +68,10 @@ public class PlayerControllerVer2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            grabber.canvas.inspectPopUp.SetActive(false);
+            if (grabber.canvas != null)
+            {
+                grabber.canvas.inspectPopUp.SetActive(false);
+            }
             if (PaintingText != null)
             {
                 tbm.StartDialog(PaintingText);
@@ -75,6 +79,10 @@ public class PlayerControllerVer2 : MonoBehaviour
             else if (missingText)
             {
                 tbm.MissingDialog();
+            }
+            if(grabber.catDungeonDialog && !tbm.inDialog)
+            {
+                tbm.StartDialog(tbm.textFile);
             }
         }
     }
