@@ -148,7 +148,7 @@ public class PlayerControllerVer2 : MonoBehaviour
         anim.SetFloat("Vertical", y);
         anim.SetBool("Moving", x != 0 || y != 0);
 
-        rigid.velocity = new Vector2(x, y);
+        rigid.velocity = new Vector2(x*2, y*2);
 
         if (x == 0 && y == 0)
         {

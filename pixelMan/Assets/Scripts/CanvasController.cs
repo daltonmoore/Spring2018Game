@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
@@ -20,12 +21,23 @@ public class CanvasController : MonoBehaviour
 
     public GameObject inspectPopUp;
 
+    public EndGame e;
+
     void Start ()
     {
         setUpButton(CanNotPlacePaintingPopUp, canNotPlacePaintingAck, CanNotPlacePaintingOk);
         setUpButton(Code1CorrectPopUp, code1CorrectAck, Code1CorrectOk);
         setUpButton(Code2CorrectPopUp, code2CorrectAck, Code2CorrectOk);
         setUpButton(Code3CorrectPopUp, code3CorrectAck, Code3CorrectOk);
+    }
+
+    private void Update()
+    {
+        if(e.getEndGame())
+        {
+            Time.timeScale = 0;
+            SceneManager.LoadScene("EndScene");
+        }
     }
 
     void setUpButton(GameObject parent, Button b, UnityAction listener)

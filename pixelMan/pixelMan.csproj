@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -295,10 +293,10 @@
     <Compile Include="Assets\Scripts\InteractableObjects\boxGrab.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\boxGrabVer2.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\boxManager.cs" />
+    <Compile Include="Assets\Scripts\InteractableObjects\EndGame.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\Grabber.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingCodeManager.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingSlot.cs" />
-    <Compile Include="Assets\Scripts\InteractableObjects\Utility\DoorTrigger.cs" />
     <Compile Include="Assets\Scripts\main menu\main menu.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\playerControllerBoxTester.cs" />

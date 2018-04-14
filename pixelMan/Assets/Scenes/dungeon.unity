@@ -147,8 +147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -5.262, y: 9.580001, z: 0.193}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -643, y: -331.2}
-  m_SizeDelta: {x: 123, y: 86.44}
+  m_AnchoredPosition: {x: -5.1, y: -117.8}
+  m_SizeDelta: {x: 115, y: 130.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11974681
 MonoBehaviour:
@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 97223930}
   - component: {fileID: 97223929}
   - component: {fileID: 97223931}
+  - component: {fileID: 97223932}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -387,6 +388,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3180089, y: 0.35872656}
   m_EdgeRadius: 0
+--- !u!114 &97223932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97223927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bdcfdbeea6d1754c8fde62bbd89c21d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &119526029
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +718,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1279009113
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: fb1b07051a4eaf84c83f86c6bef1f530, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1534,7 +1546,7 @@ BoxCollider:
   m_GameObject: {fileID: 1555323734}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

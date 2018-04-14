@@ -8,8 +8,8 @@ public class doorTriggerScript : MonoBehaviour
 
 
 
-    public void Library()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(1);//gets the scene dungeon 
+        SceneManager.LoadScene(2);
     }
 }
