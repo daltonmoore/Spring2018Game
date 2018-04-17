@@ -16,7 +16,7 @@ public class TextBoxManager : MonoBehaviour
     public int curLine;
     public int endLine;
 
-    public bool inDialog = false;
+    public bool inDialog = false, completedDialog = false;
 
     public PlayerControllerVer2 player;
 
@@ -85,6 +85,7 @@ public class TextBoxManager : MonoBehaviour
                 player.canMove = true;
                 Time.timeScale = 1;
                 inDialog = false;
+                completedDialog = true;
             }
         }
 

@@ -283,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CatDialog.cs" />
+    <Compile Include="Assets\catDialogTrigger.cs" />
     <Compile Include="Assets\doorTriggerScript.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\Scripts\CameraManager.cs" />
@@ -297,7 +298,6 @@
     <Compile Include="Assets\Scripts\InteractableObjects\Grabber.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingCodeManager.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingSlot.cs" />
-    <Compile Include="Assets\Scripts\main menu\main menu.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\playerControllerBoxTester.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControllerVer2.cs" />

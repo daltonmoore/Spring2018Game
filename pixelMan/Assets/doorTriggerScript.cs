@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class doorTriggerScript : MonoBehaviour
 {
-
+    public TextBoxManager tbm;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(2);
+        if(tbm.completedDialog)
+            SceneManager.LoadScene(2);
     }
 }
