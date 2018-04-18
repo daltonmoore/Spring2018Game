@@ -289,6 +289,7 @@
     <Compile Include="Assets\Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\CanvasController.cs" />
     <Compile Include="Assets\Scripts\DialogPanel.cs" />
+    <Compile Include="Assets\Scripts\EndSceneButton.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeBallTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy\SlimeController.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\boxGrab.cs" />
@@ -298,6 +299,7 @@
     <Compile Include="Assets\Scripts\InteractableObjects\Grabber.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingCodeManager.cs" />
     <Compile Include="Assets\Scripts\InteractableObjects\PaintingSlot.cs" />
+    <Compile Include="Assets\Scripts\NextSceneScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\playerControllerBoxTester.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControllerVer2.cs" />

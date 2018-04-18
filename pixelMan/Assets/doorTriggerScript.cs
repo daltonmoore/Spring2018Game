@@ -11,6 +11,6 @@ public class doorTriggerScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(tbm.completedDialog)
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
     }
 }

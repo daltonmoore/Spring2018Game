@@ -10,7 +10,7 @@ public class Grabber : MonoBehaviour
     GameObject painting;
     GameObject paintingCodeSlot;
     bool playerInGrabOrPlaceTrigger, playerHasPainting = false;
-    bool playerInCodeTrigger;
+    public bool playerInCodeTrigger;
     bool paintingCodeOneCorrect, paintingCodeTwoCorrect, paintingCodeThreeCorrect;
     PlayerControllerVer2 controller;
     int currentCodeSlot;

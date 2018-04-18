@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class CanvasController : MonoBehaviour
 {
+    public Grabber player;
+
     public GameObject CanNotPlacePaintingPopUp;
     Button canNotPlacePaintingAck;
 
@@ -21,6 +23,8 @@ public class CanvasController : MonoBehaviour
 
     public GameObject inspectPopUp;
 
+    public GameObject placePopUp;
+
     public EndGame e;
 
     void Start ()
@@ -33,6 +37,15 @@ public class CanvasController : MonoBehaviour
 
     private void Update()
     {
+        if(player.playerInCodeTrigger)
+        {
+            placePopUp.SetActive(true);
+        }
+        else
+        {
+            placePopUp.SetActive(false);
+        }
+
         if(e.getEndGame())
         {
             Time.timeScale = 0;
